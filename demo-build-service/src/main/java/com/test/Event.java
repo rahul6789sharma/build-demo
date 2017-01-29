@@ -2,7 +2,7 @@ package com.test;
 
 public class Event {
 
-	public void test(){
-		System.out.println()
+	public void dis() {
+		System.out.println("Hello");
 	}
 }
