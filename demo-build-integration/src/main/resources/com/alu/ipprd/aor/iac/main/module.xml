@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module xmlns="urn:jboss:module:1.1" name="com.alu.ipprd.aor.iac">
+	<resources>
+		<resource-root path="log4j/log4j-1.2.17.jar" />
+		<resource-root path="log4j/" />
+		<resource-root path="aor-platform-iac-integration-4.0.0-SNAPSHOT.jar" />
+		<resource-root path="." />
+	</resources>
+
+	<dependencies>
+		<module name="javax.api" export="true" />
+		<module name="jgrapht" export="true" />
+		<module name="com.alu.ipprd.csl" export="true" />
+		<module name="com.alu.ipprd.aor.platform.common.data" export="true" />
+	</dependencies>
+
+</module> 

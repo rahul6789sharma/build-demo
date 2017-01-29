@@ -1,0 +1,19 @@
+package alu.drools
+
+import com.alu.ipprd.ac.sia.bo.AlarmBO;
+import java.lang.*;
+
+declare AlarmBO
+@role ( event)
+end
+
+rule 'rule_2'
+when 
+	event1: AlarmBO(getAttr('attr1')=='val1')  &&
+	event2 : AlarmBO(getAttr('attr2')=='val2' , this after[0, 1m] event1) 
+
+	
+then
+	System.out.println("i am executed - rule_2");
+end
+	

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" targetNamespace="3.0" xmlns:tns="3.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import schemaLocation="NewXMLSchema6.xsd"/>
+
+  <xs:complexType name="Association">
+    <xs:sequence>
+      <xs:element name="Type" type="xs:string"/>
+      <xs:element name="NeoDirection" type="direction" minOccurs="0"/>
+      <xs:element name="Source" type="tns:Entity" minOccurs="0"/>
+      <xs:element name="Target" type="tns:Entity" minOccurs="0"/>
+      <xs:element name="Features" type="featureWrapper" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Entity">
+    <xs:sequence>
+      <xs:element name="UUID" type="xs:string" minOccurs="0"/>
+      <xs:element name="SureName" type="xs:string"/>
+      <xs:element name="Type" type="xs:string" minOccurs="0"/>
+      <xs:element name="SubType" type="xs:string" minOccurs="0"/>
+      <xs:element name="DiscoveredName" type="xs:string" minOccurs="0"/>
+      <xs:element name="DisplayName" type="xs:string" minOccurs="0"/>
+      <xs:element name="DiscoveryLevel" type="discoveryLevel" minOccurs="0"/>
+      <xs:element name="Operation" type="xs:string" minOccurs="0"/>
+      <xs:element name="Category" type="category" minOccurs="0"/>
+      <xs:element name="Template" type="xs:string" minOccurs="0"/>
+      <xs:element name="CreationDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="LastUpdateDate" type="xs:string" minOccurs="0"/>
+      <xs:element name="Features" type="featureWrapper" minOccurs="0"/>
+      <xs:element name="Associations" type="associationWrapper" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="Label" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="AccessRight">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="OnResource" type="onResource" minOccurs="0"/>
+          <xs:element name="AccessRightDefinedBy" type="accessRightDefinedBy" minOccurs="0"/>
+          <xs:element name="InContextOf" type="inContextOf" minOccurs="0"/>
+          <xs:element name="HasAccessRight" type="hasAccessRight" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Profile">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="IsTenantAdminProfile" type="xs:boolean" minOccurs="0"/>
+          <xs:element name="IsAppAdminProfile" type="xs:boolean" minOccurs="0"/>
+          <xs:element name="ProfileName" type="xs:string" minOccurs="0"/>
+          <xs:element name="ResourceAccessRights" type="xs:string" minOccurs="0"/>
+          <xs:element name="SubTenantAccessRights" type="xs:string" minOccurs="0"/>
+          <xs:element name="CreateList" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="UgUsesProfile" type="ugUsesProfile" minOccurs="0"/>
+          <xs:element name="AppUsesProfile" type="appUsesProfile" minOccurs="0"/>
+          <xs:element name="AssociatesWith" type="profileAssociatesWith" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="UserGroup">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="CreatorId" type="xs:string" minOccurs="0"/>
+          <xs:element name="UserGroupName" type="xs:string" minOccurs="0"/>
+          <xs:element name="HasUG" type="hasUG" minOccurs="0"/>
+          <xs:element name="BelongsToApp" type="belongsToApp" minOccurs="0"/>
+          <xs:element name="UgUsesProfile" type="ugUsesProfile" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="AssociatesWith" type="userGroupAssociatesWith" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="HasAccessRight" type="hasAccessRight" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="HasResourceGroup" type="hasResourceGroup" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="AttachesTo" type="tenantAttachesTo" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Tenant">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="CreatorId" type="xs:string" minOccurs="0"/>
+          <xs:element name="AuthEndPoint" type="xs:string" minOccurs="0"/>
+          <xs:element name="HasCRG" type="hasCRG" minOccurs="0"/>
+          <xs:element name="HasMRG" type="hasMRG" minOccurs="0"/>
+          <xs:element name="HasUG" type="hasUG" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="HasSubTenant" type="hasSubTenant" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ManagedBy" type="managedBy" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="Manages" type="manages" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="RuleType" type="xs:string" minOccurs="0"/>
+          <xs:element name="AttachesTo" type="tenantAttachesTo" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CRG">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="CandidateResource" type="candidateResource" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="MRG">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="OwnsResource" type="ownsResource" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="BorrowsResource" type="borrowsResource" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="Manages" type="manages" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Collection">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="AssociatesWith" type="collectionAssociatesWith" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="AttachesTo" type="tenantAttachesTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="Contains" type="contains" minOccurs="0"/>
+          <xs:element name="GroupedAs" type="groupedAs" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CatalogueItem">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="Contains" type="contains" minOccurs="0"/>
+          <xs:element name="BelongsToApp" type="belongsToApp" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="AppUsesProfile" type="appUsesProfile" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ApplicableTo" type="applicableTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="AssociatesWith" type="catalogueItemAssociatesWith" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Equipment">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="BelongsTo" type="belongsTo" minOccurs="0"/>
+          <xs:element name="ConnectsTo" type="ConnectsTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ConsumesCapacity" type="equipmentConsumesCapacity" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="GroupedAs" type="groupedAs" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="HasCapacity" type="equipmentHasCapacity" minOccurs="0"/>
+          <xs:element name="HasState" type="equipmentHasState" minOccurs="0"/>
+          <xs:element name="InstanceOf" type="equipmentInstanceOf" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="LocatedAt" type="locatedAt" minOccurs="0"/>
+          <xs:element name="PartOf" type="partOf" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ResidesOn" type="residesOn" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="RoutesTo" type="routesTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="TerminatesOn" type="pathTerminatesOn" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Network">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="BelongsTo" type="belongsTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="GroupedAs" type="groupedAs" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="HasState" type="networkHasState" minOccurs="0"/>
+          <xs:element name="ReliesOn" type="reliesOn" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="State">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="HasState" type="hasState" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Endpoint">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="AssociatesWith" type="endpointAssociatesWith" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="AttachesTo" type="pathAttachesTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ConsumesCapacity" type="endpointConsumesCapacity" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ForwardsTo" type="forwardsTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="GroupedAs" type="groupedAs" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="HasCapacity" type="endpointHasCapacity" minOccurs="0"/>
+          <xs:element name="HasState" type="endpointHasState" minOccurs="0"/>
+          <xs:element name="InstanceOf" type="endpointInstanceOf" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="RoutesTo" type="routesTo" minOccurs="0"/>
+          <xs:element name="TerminatesOn" type="serviceTerminatesOn" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Path">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="AttachesTo" type="pathAttachesTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="Consumes" type="consumes" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ConsumesCapacity" type="pathConsumesCapacity" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="DependsOn" type="dependsOn" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="GroupedAs" type="groupedAs" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="HasCapacity" type="pathHasCapacity" minOccurs="0"/>
+          <xs:element name="HasState" type="pathHasState" minOccurs="0"/>
+          <xs:element name="InstanceOf" type="pathInstanceOf" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="LinksTo" type="linksTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ReliesOn" type="pathReliesOn" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="TerminatesOn" type="pathTerminatesOn" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="Uses" type="uses" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Service">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="AssociatesWith" type="serviceAssociatesWith" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="AttachesTo" type="serviceAttachesTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ConnectsTo" type="ConnectsTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="Consumes" type="consumes" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ConsumesCapacity" type="serviceConsumesCapacity" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="GroupedAs" type="groupedAs" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="HasCapacity" type="serviceHasCapacity" minOccurs="0"/>
+          <xs:element name="HasState" type="serviceHasState" minOccurs="0"/>
+          <xs:element name="InstanceOf" type="serviceInstanceOf" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="TerminatesOn" type="serviceTerminatesOn" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="Uses" type="uses" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="FCP">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="AssociatesWith" type="fcpAssociatesWith" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="AttachesTo" type="serviceAttachesTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ConsumesCapacity" type="fcpConsumesCapacity" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="DependsOn" type="dependsOn" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ForwardsTo" type="forwardsTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="GroupedAs" type="groupedAs" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="HasCapacity" type="fcpHasCapacity" minOccurs="0"/>
+          <xs:element name="HasState" type="fcpHasState" minOccurs="0"/>
+          <xs:element name="InstanceOf" type="fcpInstanceOf" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="LinksTo" type="linksTo" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="PartOf" type="partOf" minOccurs="0"/>
+          <xs:element name="RoutesTo" type="endpointRoutesTo" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CapacityDemand">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="ConsumesCapacity" type="consumesCapacity" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Location">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="AssociatesWith" type="locationAssociatesWith" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="GroupedAs" type="groupedAs" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="LocatedAt" type="locatedAt" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="ResidesIn" type="residesIn" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Capacity">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="HasCapacity" type="hasCapacity" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="ResourceGroup">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="ResourceGroupName" type="xs:string" minOccurs="0"/>
+          <xs:element name="HasResource" type="hasResource" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Policy">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:sequence>
+          <xs:element name="AssociatesWith" type="policyAssociatesWith" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="SureType">
+    <xs:complexContent>
+      <xs:extension base="tns:Entity">
+        <xs:all/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="EntityList">
+    <xs:sequence>
+      <xs:element name="element" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="http://www.mdo.com/metadata" xmlns:tns="http://www.mdo.com/metadata" xmlns:mdo="http://www.mdo.com/metadata" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.w3.org/2005/Atom">
+
+  <xs:import namespace="http://www.w3.org/2005/Atom" schemaLocation="www.w3.org_2005_Atom.xsd"/>
+
+  <xs:import schemaLocation="NewXMLSchema6.xsd"/>
+
+  <xs:element name="specSubspec" type="tns:specSubspec"/>
+
+  <xs:element name="specValidation" type="tns:specValidation"/>
+
+  <xs:element name="specification" type="tns:specification"/>
+
+  <xs:element name="specificationFeature" type="tns:specificationFeature"/>
+
+  <xs:element name="specificationFeatureType" type="tns:specificationFeatureType"/>
+
+  <xs:complexType name="specification">
+    <xs:sequence>
+      <xs:element ref="ns1:link" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="specificationId" type="xs:long" minOccurs="0"/>
+      <xs:element name="creationDate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="lastUpdate" type="xs:dateTime" minOccurs="0"/>
+      <xs:element name="specName" type="xs:string" minOccurs="0"/>
+      <xs:element name="specState" type="xs:string" minOccurs="0"/>
+      <xs:element name="specType" type="xs:string" minOccurs="0"/>
+      <xs:element name="subType" type="xs:string" minOccurs="0"/>
+      <xs:element name="specVersion" type="xs:string" minOccurs="0"/>
+      <xs:element ref="tns:specSubspec" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="ParentSpecSubspec" type="tns:specSubspec" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="tns:specificationFeature" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="specSubspec">
+    <xs:sequence>
+      <xs:element ref="ns1:link" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="specSubspecId" type="xs:long" minOccurs="0"/>
+      <xs:element name="subSpecification" type="tns:specification" minOccurs="0"/>
+      <xs:element name="parentSpecification" type="tns:specification" minOccurs="0"/>
+      <xs:element ref="tns:specificationFeature" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="specificationFeature">
+    <xs:sequence>
+      <xs:element ref="ns1:link" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="specificationFeatureId" type="xs:long" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+      <xs:element name="comments" type="xs:string" minOccurs="0"/>
+      <xs:element ref="tns:specificationFeatureType" minOccurs="0"/>
+      <xs:element ref="tns:specification" minOccurs="0"/>
+      <xs:element name="specSubSpecification" type="tns:specSubspec" minOccurs="0"/>
+      <xs:element name="parentSpecificationFeature" type="tns:specificationFeature" minOccurs="0"/>
+      <xs:element name="property" type="tns:specificationFeature" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="specificationFeatureType">
+    <xs:sequence>
+      <xs:element ref="ns1:link" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="specFeatureTypeId" type="xs:long" minOccurs="0"/>
+      <xs:element name="specFeatureType" type="xs:string" minOccurs="0"/>
+      <xs:element name="specValidations" type="tns:specValidation" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="tns:specificationFeature" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="specValidation">
+    <xs:sequence>
+      <xs:element ref="ns1:link" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="validationId" type="xs:long" minOccurs="0"/>
+      <xs:element name="name" type="xs:string" minOccurs="0"/>
+      <xs:element ref="tns:specificationFeatureType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

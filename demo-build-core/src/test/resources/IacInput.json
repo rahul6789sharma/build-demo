@@ -1,0 +1,7 @@
+{"eventId":"1","objectType":"Service","topologyKey":"LAG","rcaOrSiaFlag":"1", "eventType":"","technology":"","timeStamp":"", "type":"INIT_EVENTS_DELIV"}
+{"eventId":"101","objectType":"Service","topologyKey":"Link1","rcaOrSiaFlag":"1", "eventType":"","technology":"","timeStamp":"", "type":"Data"}
+{"eventId":"102","objectType":"Service","topologyKey":"Link1","rcaOrSiaFlag":"1", "eventType":"","technology":"","timeStamp":"", "type":"Data"}
+{"eventId":"103","objectType":"Service","topologyKey":"Link1","rcaOrSiaFlag":"1", "eventType":"","technology":"","timeStamp":"", "type":"Data"}
+{"eventId":"104","objectType":"Service","topologyKey":"Link1","rcaOrSiaFlag":"1", "eventType":"","technology":"","timeStamp":"", "type":"Data"}
+{"eventId":"105","objectType":"Service","topologyKey":"Link1","rcaOrSiaFlag":"1", "eventType":"","technology":"","timeStamp":"", "type":"Data"}
+{"eventId":"1","objectType":"Service","topologyKey":"LAG","rcaOrSiaFlag":"1", "eventType":"","technology":"","timeStamp":"", "type":"END_EVENTS_DELIV"}

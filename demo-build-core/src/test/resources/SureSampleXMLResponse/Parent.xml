@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<collection 
+    xmlns:sure="http://www.mdf.com/sure" 
+    xmlns:dto="http://www.mdf.com/dto" 
+    xmlns:atom="http://www.w3.org/2005/Atom">
+    <links/>
+    <element 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sure:equipment">
+        <atom:link rel="onlyRoot" href="http://135.250.139.168:10080/mdf/sure/equipments/onlyRoot"/>
+        <atom:link rel="subEquipments" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/subEquipments"/>
+        <atom:link rel="networks" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/networks"/>
+        <atom:link rel="location" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/location"/>
+        <atom:link rel="connectedEquipments" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/connectedEquipments"/>
+        <atom:link rel="self" href="http://135.250.139.168:10080/mdf/sure/equipments/987650"/>
+        <atom:link rel="self" href="http://135.250.139.168:10080/mdf/sure/equipments/987650"/>
+        <atom:link rel="terminations" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/terminations"/>
+        <atom:link rel="equipmentFeatures" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/equipmentFeatures"/>
+        <atom:link rel="services" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/services"/>
+        <atom:link rel="status" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/status"/>
+        <atom:link rel="application" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/application"/>
+        <atom:link rel="parentEquipments" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/parentEquipments"/>
+        <atom:link rel="state" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/state"/>
+        <atom:link rel="topology" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/topology"/>
+        <atom:link rel="links" href="http://135.250.139.168:10080/mdf/sure/equipments/termination/all"/>
+        <atom:link rel="collection" href="http://135.250.139.168:10080/mdf/sure/equipments/987650/collection"/>
+        <sure:equipmentId>987650</sure:equipmentId>
+        <sure:creationDate>2016-05-06T12:40:15+05:30</sure:creationDate>
+        <sure:equipmentName>Node1</sure:equipmentName>
+        <sure:lastUpdate>2016-05-06T12:40:15+05:30</sure:lastUpdate>
+        <sure:discoveredName>Node1</sure:discoveredName>
+        <sure:equipmentType>
+            <atom:link rel="equipmentType" href="http://135.250.139.168:10080/mdf/sure/equipmentTypes/associatedWithRootEquipment"/>
+            <atom:link rel="equipments" href="http://135.250.139.168:10080/mdf/sure/equipmentTypes/10124/equipments"/>
+            <atom:link rel="self" href="http://135.250.139.168:10080/mdf/sure/equipmentTypes/10124"/>
+            <sure:equipmentTypeId>10124</sure:equipmentTypeId>
+            <sure:equipmentType>Node</sure:equipmentType>
+        </sure:equipmentType>
+        <sure:parentEquipment>
+            <atom:link rel="onlyRoot" href="http://135.250.139.168:10080/mdf/sure/equipments/onlyRoot"/>
+            <atom:link rel="subEquipments" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/subEquipments"/>
+            <atom:link rel="networks" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/networks"/>
+            <atom:link rel="location" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/location"/>
+            <atom:link rel="connectedEquipments" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/connectedEquipments"/>
+            <atom:link rel="self" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900"/>
+            <atom:link rel="self" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900"/>
+            <atom:link rel="terminations" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/terminations"/>
+            <atom:link rel="equipmentFeatures" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/equipmentFeatures"/>
+            <atom:link rel="services" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/services"/>
+            <atom:link rel="status" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/status"/>
+            <atom:link rel="application" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/application"/>
+            <atom:link rel="parentEquipments" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/parentEquipments"/>
+            <atom:link rel="state" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/state"/>
+            <atom:link rel="topology" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/topology"/>
+            <atom:link rel="links" href="http://135.250.139.168:10080/mdf/sure/equipments/termination/all"/>
+            <atom:link rel="collection" href="http://135.250.139.168:10080/mdf/sure/equipments/5678900/collection"/>
+            <sure:equipmentId>5678900</sure:equipmentId>
+            <sure:creationDate>2016-05-06T12:40:15+05:30</sure:creationDate>
+            <sure:equipmentName>HUB</sure:equipmentName>
+            <sure:lastUpdate>2016-05-06T12:40:15+05:30</sure:lastUpdate>
+            <sure:discoveredName>HUB</sure:discoveredName>
+        </sure:parentEquipment>
+    </element>
+    <metaData>
+        <totalPages>1</totalPages>
+        <currentPage>1</currentPage>
+        <totalElements>1</totalElements>
+        <limit>1</limit>
+    </metaData>
+</collection>

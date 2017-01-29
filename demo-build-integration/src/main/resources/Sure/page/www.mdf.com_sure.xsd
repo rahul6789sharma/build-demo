@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="http://www.mdf.com/sure" xmlns:sure="http://www.mdf.com/sure" xmlns:tns="http://www.mdf.com/sure" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://www.w3.org/2005/Atom">
+
+  <xs:import namespace="http://www.w3.org/2005/Atom" schemaLocation="www.w3.org_2005_Atom.xsd"/>
+
+  <xs:element name="collection" type="tns:collection"/>
+
+  <xs:element name="links" type="tns:links"/>
+
+  <xs:element name="metaData" type="tns:metaData"/>
+
+  <xs:complexType name="pageable">
+    <xs:sequence>
+      <xs:element name="pageLimit" type="xs:int"/>
+      <xs:element name="pageNo" type="xs:int"/>
+      <xs:element name="recordStart" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="metaData">
+    <xs:sequence>
+      <xs:element name="totalPages" type="xs:int"/>
+      <xs:element name="currentPage" type="xs:int"/>
+      <xs:element name="totalElements" type="xs:int"/>
+      <xs:element name="limit" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collection">
+    <xs:sequence>
+      <xs:element ref="tns:links" minOccurs="0"/>
+      <xs:element name="element" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="tns:metaData" minOccurs="0"/>
+    </xs:sequence>
+    <xs:attribute name="type" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="links">
+    <xs:sequence>
+      <xs:element ref="ns1:link" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
+

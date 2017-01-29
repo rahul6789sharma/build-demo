@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema elementFormDefault="qualified" version="1.0" targetNamespace="http://www.w3.org/2005/Atom" xmlns:tns="http://www.w3.org/2005/Atom" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="www.w3.org_XML_1998_namespace.xsd"/>
+
+  <xs:import schemaLocation="NewXMLSchema6.xsd"/>
+
+  <xs:element name="link" nillable="true" type="xs:anyType"/>
+
+  <xs:complexType name="link">
+    <xs:complexContent>
+      <xs:extension base="tns:commonAttributes">
+        <xs:sequence/>
+        <xs:attribute name="href" type="xs:string" use="required"/>
+        <xs:attribute name="hreflang" type="xs:string"/>
+        <xs:attribute name="length" type="xs:string"/>
+        <xs:attribute name="rel" type="xs:string"/>
+        <xs:attribute name="title" type="xs:string"/>
+        <xs:attribute name="type" type="xs:string"/>
+        <xs:anyAttribute namespace="##other" processContents="skip"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="commonAttributes">
+    <xs:sequence/>
+    <xs:attribute ref="xml:base"/>
+    <xs:attribute ref="xml:lang"/>
+    <xs:anyAttribute namespace="##other" processContents="skip"/>
+  </xs:complexType>
+
+</xs:schema>
+

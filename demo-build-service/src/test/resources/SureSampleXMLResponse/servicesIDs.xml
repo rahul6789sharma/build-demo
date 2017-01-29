@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- http://135.254.229.139:10080/mdf/sure/paths/4/services?includeChild=true&includeParent=true -->
+<collection xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dto="http://www.mdf.com/dto" xmlns:sure="http://www.mdf.com/sure">
+   <links />
+   <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sure:service">
+      <atom:link rel="state" href="http://135.254.229.139:10080/mdf/sure/services/5/state" />
+      <atom:link rel="serviceHistorys" href="http://135.254.229.139:10080/mdf/sure/services/5/serviceHistorys" />
+      <atom:link rel="topology" href="http://135.254.229.139:10080/mdf/sure/services/5/topology" />
+      <atom:link rel="modify" href="http://135.254.229.139:10080/mdf/sure/services/modify" />
+      <atom:link rel="topology" href="http://135.254.229.139:10080/mdf/sure/services/5/serviceLinks" />
+      <atom:link rel="selfName" href="http://135.254.229.139:10080/mdf/sure/services" />
+      <atom:link rel="customer" href="http://135.254.229.139:10080/mdf/sure/services/5/customer" />
+      <atom:link rel="serviceAnnotations" href="http://135.254.229.139:10080/mdf/sure/services/5/serviceAnnotations" />
+      <atom:link rel="equipments" href="http://135.254.229.139:10080/mdf/sure/services/5/equipments" />
+      <atom:link rel="paths" href="http://135.254.229.139:10080/mdf/sure/services/5/paths" />
+      <atom:link rel="parentServices" href="http://135.254.229.139:10080/mdf/sure/services/5/parentServices" />
+      <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/services/5" />
+      <atom:link rel="subServices" href="http://135.254.229.139:10080/mdf/sure/services/5/subServices" />
+      <atom:link rel="serviceFeatures" href="http://135.254.229.139:10080/mdf/sure/services/5/serviceFeatures" />
+      <atom:link rel="status" href="http://135.254.229.139:10080/mdf/sure/services/5/status" />
+      <atom:link rel="serviceTerminations" href="http://135.254.229.139:10080/mdf/sure/services/5/serviceTerminations" />
+      <sure:serviceId>5</sure:serviceId>
+      <sure:serviceName>IPTC.net/1830PSS-DWDM-TransportService-29-X7A6-X7A8_OPSA1</sure:serviceName>
+      <sure:creationDate>2016-03-08T18:03:39+05:30</sure:creationDate>
+      <sure:discoveredName>svc-mgr:service-105</sure:discoveredName>
+      <sure:serviceType>TransportService</sure:serviceType>
+      <sure:serviceFeature>
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/38" />
+         <atom:link rel="service" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/38/service" />
+         <sure:serviceFeatureId>38</sure:serviceFeatureId>
+         <sure:name>ServiceId</sure:name>
+         <sure:value>29</sure:value>
+      </sure:serviceFeature>
+      <sure:serviceFeature>
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/39" />
+         <atom:link rel="service" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/39/service" />
+         <sure:serviceFeatureId>39</sure:serviceFeatureId>
+         <sure:name>DiscoveredName</sure:name>
+         <sure:value>svc-mgr:service-105</sure:value>
+      </sure:serviceFeature>
+      <sure:serviceFeature>
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/37" />
+         <atom:link rel="service" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/37/service" />
+         <sure:serviceFeatureId>37</sure:serviceFeatureId>
+         <sure:name>serviceType</sure:name>
+         <sure:value>TransportService</sure:value>
+      </sure:serviceFeature>
+      <sure:serviceFeature>
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/42" />
+         <atom:link rel="service" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/42/service" />
+         <sure:serviceFeatureId>42</sure:serviceFeatureId>
+         <sure:name>DisplayedName</sure:name>
+         <sure:value>X7A6-X7A8_OPSA1</sure:value>
+      </sure:serviceFeature>
+      <sure:serviceFeature>
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/43" />
+         <atom:link rel="service" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/43/service" />
+         <sure:serviceFeatureId>43</sure:serviceFeatureId>
+         <sure:name>svcTunnelType</sure:name>
+         <sure:value>opticalService</sure:value>
+      </sure:serviceFeature>
+      <sure:serviceFeature>
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/40" />
+         <atom:link rel="service" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/40/service" />
+         <sure:serviceFeatureId>40</sure:serviceFeatureId>
+         <sure:name>STATE.operationalState</sure:name>
+         <sure:value>portInService</sure:value>
+      </sure:serviceFeature>
+      <sure:serviceFeature>
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/41" />
+         <atom:link rel="service" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/41/service" />
+         <sure:serviceFeatureId>41</sure:serviceFeatureId>
+         <sure:name>NetworkInterfaceId</sure:name>
+         <sure:value>105</sure:value>
+      </sure:serviceFeature>
+      <sure:serviceFeature>
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/44" />
+         <atom:link rel="service" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/44/service" />
+         <sure:serviceFeatureId>44</sure:serviceFeatureId>
+         <sure:name>direction</sure:name>
+         <sure:value>bi</sure:value>
+      </sure:serviceFeature>
+      <sure:serviceFeature>
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/45" />
+         <atom:link rel="service" href="http://135.254.229.139:10080/mdf/sure/serviceFeatures/45/service" />
+         <sure:serviceFeatureId>45</sure:serviceFeatureId>
+         <sure:name>rate</sure:name>
+         <sure:value>tenGige</sure:value>
+      </sure:serviceFeature>
+   </element>
+   <metaData>
+      <totalPages>1</totalPages>
+      <currentPage>1</currentPage>
+      <totalElements>1</totalElements>
+      <limit>1</limit>
+   </metaData>
+</collection>

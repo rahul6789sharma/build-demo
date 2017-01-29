@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- http://135.254.229.139:10080/mdf/sure/find/entityType?q=discoveredName;EQUALS;svc-mgr%3AsvcPath-4 -->
+
+<dto:element xmlns:dto="http://www.mdf.com/dto" xmlns:atom="http://www.w3.org/2005/Atom">
+   <dto:entityType>Path</dto:entityType>
+   <dto:discoveredName>svc-mgr:svcPath-4</dto:discoveredName>
+</dto:element>

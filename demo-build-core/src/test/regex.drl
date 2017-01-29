@@ -1,0 +1,24 @@
+package alu.drools
+
+import com.alu.ipprd.ac.sia.bo.AlarmBO;
+import java.lang.*;
+
+declare AlarmBO
+@role ( event)
+end
+
+rule 'rule_1'
+when 
+	event1: AlarmBO(getAttr('attr1') matches 'val.*') 	
+then
+	System.out.println("i am executed - rule_1");
+end
+	
+	
+rule 'rule_2'
+when 
+	event1: AlarmBO()
+then
+	
+	System.out.println("i am executed - rule_2 : " + event1.getAttr("attr1") );
+end	

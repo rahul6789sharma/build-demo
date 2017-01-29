@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- http://135.254.229.139:10080/mdf/sure/paths?q=discoveredName;EQUALS;svc-mgr%3AsvcPath-4 -->
+
+<collection xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dto="http://www.mdf.com/dto" xmlns:sure="http://www.mdf.com/sure">
+   <links />
+   <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="sure:path">
+      <atom:link rel="state" href="http://135.254.229.139:10080/mdf/sure/paths/4/state" />
+      <atom:link rel="services" href="http://135.254.229.139:10080/mdf/sure/paths/4/services" />
+      <atom:link rel="status" href="http://135.254.229.139:10080/mdf/sure/paths/4/status" />
+      <atom:link rel="pathFeatures" href="http://135.254.229.139:10080/mdf/sure/paths/4/pathFeatures" />
+      <atom:link rel="parentPaths" href="http://135.254.229.139:10080/mdf/sure/paths/4/parentPaths" />
+      <atom:link rel="capacitys" href="http://135.254.229.139:10080/mdf/sure/paths/4/capacitys" />
+      <atom:link rel="network" href="http://135.254.229.139:10080/mdf/sure/paths/4/network" />
+      <atom:link rel="capacityDemands" href="http://135.254.229.139:10080/mdf/sure/paths/4/capacityDemands" />
+      <atom:link rel="customers" href="http://135.254.229.139:10080/mdf/sure/paths/4/customers" />
+      <atom:link rel="subPaths" href="http://135.254.229.139:10080/mdf/sure/paths/4/subPaths" />
+      <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/paths/4" />
+      <atom:link rel="getLinks" href="http://135.254.229.139:10080/mdf/sure/paths/4/links" />
+      <atom:link rel="terminations" href="http://135.254.229.139:10080/mdf/sure/paths/4/terminations" />
+      <atom:link rel="subpathSublinks" href="http://135.254.229.139:10080/mdf/sure/paths/4/subpathSublinks" />
+      <sure:pathId>4</sure:pathId>
+      <sure:creationDate>2016-03-08T17:55:37+05:30</sure:creationDate>
+      <sure:pathName>IPTC.net/1830PSS-DWDM-ServicePath-svc-mgr:svcPath-4</sure:pathName>
+      <sure:discoveredName>svc-mgr:svcPath-4</sure:discoveredName>
+      <sure:pathType>
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/pathTypes/4" />
+         <atom:link rel="paths" href="http://135.254.229.139:10080/mdf/sure/pathTypes/4/paths" />
+         <sure:pathTypeId>4</sure:pathTypeId>
+         <sure:pathType>DWDM End to End Path</sure:pathType>
+      </sure:pathType>
+      <sure:pathFeature>
+         <atom:link rel="path" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/34/path" />
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/34" />
+         <sure:pathFeatureId>34</sure:pathFeatureId>
+         <sure:name>protectionLevel</sure:name>
+         <sure:value>protected</sure:value>
+      </sure:pathFeature>
+      <sure:pathFeature>
+         <atom:link rel="path" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/35/path" />
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/35" />
+         <sure:pathFeatureId>35</sure:pathFeatureId>
+         <sure:name>serviceMode</sure:name>
+         <sure:value>unprotected</sure:value>
+      </sure:pathFeature>
+      <sure:pathFeature>
+         <atom:link rel="path" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/38/path" />
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/38" />
+         <sure:pathFeatureId>38</sure:pathFeatureId>
+         <sure:name>portZPointer</sure:name>
+         <sure:value>network:10.254.0.48:shelf-1:cardSlot-16:card:port-2</sure:value>
+      </sure:pathFeature>
+      <sure:pathFeature>
+         <atom:link rel="path" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/39/path" />
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/39" />
+         <sure:pathFeatureId>39</sure:pathFeatureId>
+         <sure:name>displayedName</sure:name>
+         <sure:value>Service Path 4, Mode : Unprotected</sure:value>
+      </sure:pathFeature>
+      <sure:pathFeature>
+         <atom:link rel="path" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/36/path" />
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/36" />
+         <sure:pathFeatureId>36</sure:pathFeatureId>
+         <sure:name>portAPointer</sure:name>
+         <sure:value>network:10.254.0.46:shelf-1:cardSlot-16:card:port-2</sure:value>
+      </sure:pathFeature>
+      <sure:pathFeature>
+         <atom:link rel="path" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/37/path" />
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/37" />
+         <sure:pathFeatureId>37</sure:pathFeatureId>
+         <sure:name>biDirectional</sure:name>
+         <sure:value>true</sure:value>
+      </sure:pathFeature>
+      <sure:pathFeature>
+         <atom:link rel="path" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/42/path" />
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/42" />
+         <sure:pathFeatureId>42</sure:pathFeatureId>
+         <sure:name>objectFullName</sure:name>
+         <sure:value>svc-mgr:svcPath-4</sure:value>
+      </sure:pathFeature>
+      <sure:pathFeature>
+         <atom:link rel="path" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/43/path" />
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/43" />
+         <sure:pathFeatureId>43</sure:pathFeatureId>
+         <sure:name>svcComponentId</sure:name>
+         <sure:value>105</sure:value>
+      </sure:pathFeature>
+      <sure:pathFeature>
+         <atom:link rel="path" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/40/path" />
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/40" />
+         <sure:pathFeatureId>40</sure:pathFeatureId>
+         <sure:name>pathId</sure:name>
+         <sure:value>4</sure:value>
+      </sure:pathFeature>
+      <sure:pathFeature>
+         <atom:link rel="path" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/41/path" />
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/41" />
+         <sure:pathFeatureId>41</sure:pathFeatureId>
+         <sure:name>numberOfXcsPresent</sure:name>
+         <sure:value>0</sure:value>
+      </sure:pathFeature>
+      <sure:pathFeature>
+         <atom:link rel="path" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/44/path" />
+         <atom:link rel="self" href="http://135.254.229.139:10080/mdf/sure/pathFeatures/44" />
+         <sure:pathFeatureId>44</sure:pathFeatureId>
+         <sure:name>name</sure:name>
+         <sure:value>svcPath-4</sure:value>
+      </sure:pathFeature>
+   </element>
+   <metaData>
+      <totalPages>1</totalPages>
+      <currentPage>1</currentPage>
+      <totalElements>1</totalElements>
+      <limit>1</limit>
+   </metaData>
+</collection>

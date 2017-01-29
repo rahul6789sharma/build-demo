@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://www.mdo.com/metadata" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:ns1="3.0">
+
+  <xs:import namespace="3.0" schemaLocation="3.0.xsd"/>
+
+  <xs:import namespace="http://www.w3.org/2005/Atom" schemaLocation="www.w3.org_2005_Atom.xsd"/>
+
+  <xs:import namespace="http://www.mdo.com/metadata" schemaLocation="www.mdo.com_metadata.xsd"/>
+
+  <xs:element name="AccessRight" type="ns1:AccessRight"/>
+
+  <xs:element name="Association" type="ns1:Association"/>
+
+  <xs:element name="CRG" type="ns1:CRG"/>
+
+  <xs:element name="Capacity" type="ns1:Capacity"/>
+
+  <xs:element name="CapacityDemand" type="ns1:CapacityDemand"/>
+
+  <xs:element name="Catalogue" type="Catalogue"/>
+
+  <xs:element name="CatalogueItem" type="ns1:CatalogueItem"/>
+
+  <xs:element name="Collection" type="ns1:Collection"/>
+
+  <xs:element name="Endpoint" type="ns1:Endpoint"/>
+
+  <xs:element name="EntityList" type="ns1:EntityList"/>
+
+  <xs:element name="Equipment" type="ns1:Equipment"/>
+
+  <xs:element name="FCP" type="ns1:FCP"/>
+
+  <xs:element name="Location" type="ns1:Location"/>
+
+  <xs:element name="MRG" type="ns1:MRG"/>
+
+  <xs:element name="Network" type="ns1:Network"/>
+
+  <xs:element name="Path" type="ns1:Path"/>
+
+  <xs:element name="Policy" type="ns1:Policy"/>
+
+  <xs:element name="Profile" type="ns1:Profile"/>
+
+  <xs:element name="ResourceGroup" type="ns1:ResourceGroup"/>
+
+  <xs:element name="Service" type="ns1:Service"/>
+
+  <xs:element name="State" type="ns1:State"/>
+
+  <xs:element name="SureType" type="ns1:SureType"/>
+
+  <xs:element name="Tenant" type="ns1:Tenant"/>
+
+  <xs:element name="UserGroup" type="ns1:UserGroup"/>
+
+  <xs:element name="accessRightDefinedBy" type="accessRightDefinedBy"/>
+
+  <xs:element name="appUsesProfile" type="appUsesProfile"/>
+
+  <xs:element name="applicableTo" type="applicableTo"/>
+
+  <xs:element name="belongsTo" type="belongsTo"/>
+
+  <xs:element name="belongsToApp" type="belongsToApp"/>
+
+  <xs:element name="borrowsResource" type="borrowsResource"/>
+
+  <xs:element name="candidateResource" type="candidateResource"/>
+
+  <xs:element name="catalogueItemAssociatesWith" type="catalogueItemAssociatesWith"/>
+
+  <xs:element name="collectionAssociatesWith" type="collectionAssociatesWith"/>
+
+  <xs:element name="connectsTo" type="ConnectsTo"/>
+
+  <xs:element name="consumes" type="consumes"/>
+
+  <xs:element name="consumesCapacity" type="consumesCapacity"/>
+
+  <xs:element name="contains" type="contains"/>
+
+  <xs:element name="dependsOn" type="dependsOn"/>
+
+  <xs:element name="discoveryLevel" type="discoveryLevel"/>
+
+  <xs:element name="endpointAssociatesWith" type="endpointAssociatesWith"/>
+
+  <xs:element name="endpointConsumesCapacity" type="endpointConsumesCapacity"/>
+
+  <xs:element name="endpointHasCapacity" type="endpointHasCapacity"/>
+
+  <xs:element name="endpointHasState" type="endpointHasState"/>
+
+  <xs:element name="endpointInstanceOf" type="endpointInstanceOf"/>
+
+  <xs:element name="endpointRoutesTo" type="endpointRoutesTo"/>
+
+  <xs:element name="entity" type="ns1:Entity"/>
+
+  <xs:element name="equipmentConsumesCapacity" type="equipmentConsumesCapacity"/>
+
+  <xs:element name="equipmentHasCapacity" type="equipmentHasCapacity"/>
+
+  <xs:element name="equipmentHasState" type="equipmentHasState"/>
+
+  <xs:element name="equipmentInstanceOf" type="equipmentInstanceOf"/>
+
+  <xs:element name="fcpAssociatesWith" type="fcpAssociatesWith"/>
+
+  <xs:element name="fcpConsumesCapacity" type="fcpConsumesCapacity"/>
+
+  <xs:element name="fcpHasCapacity" type="fcpHasCapacity"/>
+
+  <xs:element name="fcpHasState" type="fcpHasState"/>
+
+  <xs:element name="fcpInstanceOf" type="fcpInstanceOf"/>
+
+  <xs:element name="forwardsTo" type="forwardsTo"/>
+
+  <xs:element name="groupedAs" type="groupedAs"/>
+
+  <xs:element name="hasAccessRight" type="hasAccessRight"/>
+
+  <xs:element name="hasCRG" type="hasCRG"/>
+
+  <xs:element name="hasCapacity" type="hasCapacity"/>
+
+  <xs:element name="hasMRG" type="hasMRG"/>
+
+  <xs:element name="hasResource" type="hasResource"/>
+
+  <xs:element name="hasResourceGroup" type="hasResourceGroup"/>
+
+  <xs:element name="hasState" type="hasState"/>
+
+  <xs:element name="hasSubTenant" type="hasSubTenant"/>
+
+  <xs:element name="hasUG" type="hasUG"/>
+
+  <xs:element name="inContextOf" type="inContextOf"/>
+
+  <xs:element name="linksTo" type="linksTo"/>
+
+  <xs:element name="locatedAt" type="locatedAt"/>
+
+  <xs:element name="locationAssociatesWith" type="locationAssociatesWith"/>
+
+  <xs:element name="managedBy" type="managedBy"/>
+
+  <xs:element name="manages" type="manages"/>
+
+  <xs:element name="networkHasState" type="networkHasState"/>
+
+  <xs:element name="onResource" type="onResource"/>
+
+  <xs:element name="ownsResource" type="ownsResource"/>
+
+  <xs:element name="partOf" type="partOf"/>
+
+  <xs:element name="pathAttachesTo" type="pathAttachesTo"/>
+
+  <xs:element name="pathConsumesCapacity" type="pathConsumesCapacity"/>
+
+  <xs:element name="pathHasCapacity" type="pathHasCapacity"/>
+
+  <xs:element name="pathHasState" type="pathHasState"/>
+
+  <xs:element name="pathInstanceOf" type="pathInstanceOf"/>
+
+  <xs:element name="pathReliesOn" type="pathReliesOn"/>
+
+  <xs:element name="pathTerminatesOn" type="pathTerminatesOn"/>
+
+  <xs:element name="policyAssociatesWith" type="policyAssociatesWith"/>
+
+  <xs:element name="profileAssociatesWith" type="profileAssociatesWith"/>
+
+  <xs:element name="reliesOn" type="reliesOn"/>
+
+  <xs:element name="residesIn" type="residesIn"/>
+
+  <xs:element name="residesOn" type="residesOn"/>
+
+  <xs:element name="routesTo" type="routesTo"/>
+
+  <xs:element name="serviceAssociatesWith" type="serviceAssociatesWith"/>
+
+  <xs:element name="serviceAttachesTo" type="serviceAttachesTo"/>
+
+  <xs:element name="serviceConsumesCapacity" type="serviceConsumesCapacity"/>
+
+  <xs:element name="serviceHasCapacity" type="serviceHasCapacity"/>
+
+  <xs:element name="serviceHasState" type="serviceHasState"/>
+
+  <xs:element name="serviceInstanceOf" type="serviceInstanceOf"/>
+
+  <xs:element name="serviceTerminatesOn" type="serviceTerminatesOn"/>
+
+  <xs:element name="tenantAttachesTo" type="tenantAttachesTo"/>
+
+  <xs:element name="ugUsesProfile" type="ugUsesProfile"/>
+
+  <xs:element name="userGroupAssociatesWith" type="userGroupAssociatesWith"/>
+
+  <xs:element name="uses" type="uses"/>
+
+
+
+  <xs:complexType name="featureWrapper">
+    <xs:sequence>
+      <xs:element name="Feature" type="Feature" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Feature">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string"/>
+      <xs:element name="Value" type="xs:string" minOccurs="0"/>
+      <xs:element name="OldValue" type="xs:string" minOccurs="0"/>
+      <xs:element name="DisplayName" type="xs:string" minOccurs="0"/>
+      <xs:element name="Mandatory" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="ReadOnly" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="Discovered" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="Severity" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="associationWrapper">
+    <xs:sequence>
+      <xs:element ref="Association" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+
+  <xs:complexType name="onResource">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="accessRightDefinedBy">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="ugUsesProfile">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="hasUG">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="hasCRG">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="candidateResource">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence>
+          <xs:element name="accessRights" type="xs:string" minOccurs="0"/>
+          <xs:element name="operation" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="hasMRG">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="ownsResource">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence>
+          <xs:element name="isShared" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="borrowsResource">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence>
+          <xs:element name="accessRights" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="manages">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence>
+          <xs:element name="accessRights" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="hasSubTenant">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence>
+          <xs:element name="isChildVisible" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="managedBy">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence>
+          <xs:element name="accessRights" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="tenantAttachesTo">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="collectionAssociatesWith">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="contains">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="belongsToApp">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="appUsesProfile">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="applicableTo">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="catalogueItemAssociatesWith">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="groupedAs">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="belongsTo">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="networkHasState">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="hasState">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="endpointAssociatesWith">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pathAttachesTo">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="consumes">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="serviceAssociatesWith">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceAttachesTo">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="fcpAssociatesWith">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="fcpConsumesCapacity">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="consumesCapacity">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="locationAssociatesWith">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="locatedAt">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="residesIn">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="dependsOn">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="forwardsTo">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="fcpHasCapacity">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="hasCapacity">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="fcpHasState">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="fcpInstanceOf">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="linksTo">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="partOf">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="endpointRoutesTo">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="ConnectsTo">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceConsumesCapacity">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceHasCapacity">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceHasState">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceInstanceOf">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="serviceTerminatesOn">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="uses">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pathConsumesCapacity">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pathHasCapacity">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pathHasState">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pathInstanceOf">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pathReliesOn">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="pathTerminatesOn">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="endpointConsumesCapacity">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="endpointHasCapacity">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="endpointHasState">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="endpointInstanceOf">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="routesTo">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="reliesOn">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="equipmentConsumesCapacity">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="equipmentHasCapacity">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="equipmentHasState">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="equipmentInstanceOf">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="residesOn">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="userGroupAssociatesWith">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="hasAccessRight">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="hasResourceGroup">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="hasResource">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="profileAssociatesWith">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="inContextOf">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="policyAssociatesWith">
+    <xs:complexContent>
+      <xs:extension base="ns1:Association">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+
+
+  <xs:complexType name="Catalogue">
+    <xs:complexContent>
+      <xs:extension base="ns1:CatalogueItem">
+        <xs:sequence>
+          <xs:element ref="ns2:specification" minOccurs="0"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="atomLink">
+    <xs:sequence/>
+    <xs:attribute name="rel" type="xs:string"/>
+    <xs:attribute name="href" type="xs:string"/>
+    <xs:attribute name="type" type="xs:string"/>
+    <xs:attribute name="hreflang" type="xs:string"/>
+    <xs:attribute name="title" type="xs:string"/>
+    <xs:attribute name="length" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:simpleType name="direction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SOURCE_TO_TARGET"/>
+      <xs:enumeration value="TARGET_TO_SOURCE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="discoveryLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MASSLOADER"/>
+      <xs:enumeration value="Level1"/>
+      <xs:enumeration value="Level2"/>
+      <xs:enumeration value="Level3"/>
+      <xs:enumeration value="Level4"/>
+      <xs:enumeration value="Level5"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="category">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INFRASTRUCTURE"/>
+      <xs:enumeration value="SERVICE"/>
+      <xs:enumeration value="STANDALONE"/>
+      <xs:enumeration value="MT_FRAMEWORK"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+
