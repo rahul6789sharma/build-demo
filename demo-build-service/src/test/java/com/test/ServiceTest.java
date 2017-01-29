@@ -28,6 +28,6 @@ public class ServiceTest {
 
 	@org.junit.Test
 	public void serviceTest() {
-	//	fail();
+		fail();
 	}
 }
